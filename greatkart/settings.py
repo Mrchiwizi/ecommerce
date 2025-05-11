@@ -138,3 +138,30 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 AUTH_USER_MODEL = "accounts.Account"
+
+
+
+###############################LOCAL################################
+
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+messages.ERROR: "danger",
+}
+
+
+
+# AUTHENTICATION_BACKENDS = [
+#     'accounts.backends.EmailBackend',  #  Path to your custom backend
+#     'django.contrib.auth.backends.ModelBackend',  # Optional, but recommended
+# ]
+
+
+
+# SMTP CONFIGURATION
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 465  # Or 465, but 587 is generally preferred
+# EMAIL_USE_TLS = True  # Use TLS for security (Port 587)
+EMAIL_USE_SSL = True # Use SSL (Port 465 - alternative, often less preferred)
+EMAIL_HOST_USER = 'godpoweramaefule@gmail.com'  # Your Gmail address
+EMAIL_HOST_PASSWORD = 'uvhvnribbnehdqzx'  # NOT your regular Gmail password!
