@@ -1,0 +1,15 @@
+{% autoescape off %}
+    Hi {{ user.first_name }},
+
+    YOUR ORDER HAS BEEN RECEIVED
+
+    Order Number: {{ order.order_number }}
+
+    PRODUCT DETAILS
+    
+    {% for items in cart_items %}
+        <img src="{{ scheme }}://{{ host }}{{ items.product.images.url }}" alt="{{ items.product.product_name }}">
+        {% comment %} {{ items.product.product_name }} - {{ scheme }}://{{ host }}{{ items.product.images.url }} {% endcomment %}
+         
+    {% endfor %}
+{% endautoescape %}

@@ -126,7 +126,7 @@ def login_view(request):
 
             url = request.META.get("HTTP_REFERER")
             try:
-                query = request.utils.urlparse(url).query
+                query = requests.utils.urlparse(url).query
                 # next=/cart/checkout/
                 params = dict(x.split("=") for x in query.split("&"))
 

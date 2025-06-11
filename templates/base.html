@@ -26,8 +26,13 @@
 <link href="{% static 'css/ui.css' %}" rel="stylesheet" type="text/css"/>
 <link href="{% static 'css/responsive.css' %}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
 
+</head>
+
 <!-- custom javascript -->
 <script src="{% static 'js/script.js' %}" type="text/javascript"></script>
+
+<!-- Include the PayPal JavaScript SDK -->
+<script src="https://www.paypal.com/sdk/js?client-id=Aeswx7l2iE228z-v3IvZ7P8Nc5LKNMkZh-PnMRm8RmVf2OITqIBnGtyaHg7jCT0BucGKpVQwT8T6lKbk&currency=USD"></script>
 
 <script type="text/javascript">
 /// some script
@@ -40,7 +45,7 @@ $(document).ready(function() {
 // jquery end
 </script>
 
-</head>
+
 <body>
     
     {% include 'includes/navbar.html' %}
@@ -51,3 +56,4 @@ $(document).ready(function() {
 
     {% include 'includes/footer.html' %}
 </body>
+</html>
